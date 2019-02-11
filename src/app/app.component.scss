@@ -1,0 +1,101 @@
+$pri-color: #4c4a4e;
+$sec-color: #5780e8;
+$ter-color: #8f9193;
+$line-color: #e4e4e4;
+
+.box {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  .header {
+    flex: 0 1 auto;
+  }
+  .content {
+    flex: 1 1 auto;
+    display: flex;
+    .sidebar {
+      width: 30%;
+      padding: 5vh 0 0;
+      background-color: #f4f4f4;
+      color: #4c4a4e;
+      text-align: center;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+      .details {
+        .row {
+          color: $sec-color;
+          display: flex;
+          justify-content: space-between;
+          font-size: 1em;
+          font-weight: 700;
+          color: $pri-color;
+          border-bottom: 2px solid $line-color;
+          margin: 2vh 1vw;
+          .left {
+            padding: 0 1vw;
+            font-size: 1.2em;
+          }
+          .right {
+            padding: 0 1vw;
+            font-size: 2em;
+          }
+        }
+        .slider__container {
+          display: flex;
+          flex-flow: column;
+          margin: 0 1vw;
+          padding-bottom: 2vh;
+          border-bottom: 2px solid $line-color;
+          .msg {
+            color: $sec-color;
+            font-size: 0.8em;
+            display: flex;
+            justify-content: center;
+            margin: 0 25% 2vh;
+          }
+          .ticks {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 0.5vw;
+          }
+          mat-slider {
+            width: 100%;
+          }
+          .submit__btn {
+            height: 30px;
+            background: $sec-color;
+            color: #ffffff;
+            border: 0;
+            border-radius: 6px;
+            margin: 2px 10px;
+            outline: none;
+            cursor: pointer;
+            width: 30%;
+            font-size: 1em;
+          }
+        }
+      }
+      .footer {
+        padding: 0 0 2vh;
+        p {
+          margin: 0;
+        }
+        .title {
+          color: $sec-color;
+          font-size: 1.2em;
+          font-weight: 700;
+        }
+        .subtitle {
+          color: $ter-color;
+          font-size: 1em;
+        }
+      }
+    }
+    .main {
+      width: 70%;
+      background-color: #ffffff;
+      text-align: center;
+    }
+  }
+}

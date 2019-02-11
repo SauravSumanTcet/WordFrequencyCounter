@@ -1,0 +1,77 @@
+table {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #747474;
+  border-collapse: collapse;
+
+  thead {
+    position: relative;
+    display: block;
+    overflow: visible;
+    background: #4a4a4a;
+    height: 8vh;
+    th {
+      color: #ffffff;
+      padding: 2vh 1vw;
+      text-align: left;
+      font-weight: 500;
+      font-size: 1.2em;
+      text-transform: uppercase;
+    }
+
+    th:nth-child(1) {
+      min-width: 5vw;
+    }
+    th:nth-child(2) {
+      min-width: 48vw;
+    }
+    th:nth-child(3) {
+      min-width: 10vw;
+    }
+  }
+
+  tbody {
+    position: relative;
+    display: block;
+    height: 82vh;
+    overflow: auto;
+    tr:nth-child(even) {
+      background-color: #f0f0f0;
+    }
+    td {
+      padding: 2vh 1vw;
+      text-align: left;
+      vertical-align: middle;
+      font-weight: 700;
+      font-size: 1.5em;
+      color: #000;
+      border: solid 1px #747474;
+    }
+
+    td:nth-child(1) {
+      width: 5vw;
+      max-width: 5vw;
+    }
+    td:nth-child(2) {
+      width: 48vw;
+      max-width: 48vw;
+    }
+    td:nth-child(3) {
+      width: 10vw;
+      max-width: 10vw;
+    }
+  }
+}
+
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}

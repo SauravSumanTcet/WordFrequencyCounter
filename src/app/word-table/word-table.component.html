@@ -1,0 +1,16 @@
+<table cellpadding="0" cellspacing="0" border="0" *ngIf="wordArr">
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Word</th>
+      <th>Frequency</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let word of wordArr;let i=index;">
+      <td>{{i+1}}</td>
+      <td>{{word[0]}}</td>
+      <td>{{word[1]}}</td>
+    </tr>
+  </tbody>
+</table>

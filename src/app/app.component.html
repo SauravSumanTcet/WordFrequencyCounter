@@ -1,0 +1,57 @@
+<div class="box">
+  <div class="header">
+    <app-nav></app-nav>
+  </div>
+  <div class="content">
+    <div class="sidebar">
+      <div class="details">
+        <div class="row">
+          <div class="left">
+            Total unique words
+          </div>
+          <div class="right">
+            {{maxVal}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="left">
+            Showing
+          </div>
+          <div class="right">
+            {{showingVal}}
+          </div>
+        </div>
+        <div class="slider__container">
+          <div class="msg">
+            Adjust slider to update number of words shown in the right pane
+          </div>
+          <div class="ticks">
+            <div>
+              {{minVal}}
+            </div>
+            <div>
+              {{nVal}}
+            </div>
+            <div>
+              {{maxVal}}
+            </div>
+          </div>
+          <mat-slider (input)="onInputChange($event)" [max]="maxVal" [min]="1" [step]="1" [(ngModel)]="nVal" [color]="'primary'"></mat-slider>
+          <button class="submit__btn" (click)="onSubmit()">Submit</button>
+        </div>
+      </div>
+      <div class="footer">
+        <p class="title">Made by Saurav Suman</p>
+        <p class="subtitle">
+          sauravat105@gmail.com
+        </p>
+        <p class="subtitle">
+          +91 9713854764
+        </p>
+      </div>
+    </div>
+    <div class="main">
+      <app-word-table [wordArr]="wordArr"></app-word-table>
+    </div>
+  </div>
+</div>
